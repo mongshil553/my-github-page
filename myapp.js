@@ -1,6 +1,6 @@
 var player = videojs('my-player');
 
-const mpd_src = "https://kr.object.ncloudstorage.com/my-test-bucket553/mytestcategory/stream.mpd";
+const mpd_src = "https://my-ncloud-bucket.s3.ap-southeast-2.amazonaws.com/blts_season2_videos/stream.mpd";
 
 
 async function getConfig() {
