@@ -16,7 +16,7 @@ async function getConfig() {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
+        body: data
       }
     );
 
