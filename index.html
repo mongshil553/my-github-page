@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BLTS 강의</title>
+    <!-- VideoJS library and css -->
+    <script src="https://vjs.zencdn.net/8.3.0/video.js"></script>
+    <link href="https://vjs.zencdn.net/8.3.0/video-js.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-eme@5.5.1/dist/videojs-contrib-eme.js"></script>
+
+    <style>
+      :root {
+        --side-pad: 20px; /* 양옆 패딩 */
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        background: #000;
+        color: #fff;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR",
+          sans-serif;
+      }
+
+      /* 상단 중앙 오늘 날짜 */
+      #today {
+        text-align: center;
+        padding: 18px var(--side-pad) 12px;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+      }
+
+      /* 비디오 영역: 화면 맞춤 + 좌우 패딩 */
+      .video-shell {
+        padding: 0 var(--side-pad);
+      }
+      #player-container {
+        width: 100%;
+        height: calc(100vh - 190px);
+        min-height: 240px;
+      }
+      .video-js {
+        width: 100% !important;
+        height: 100% !important;
+      }
+
+      /* 아래 섹션 */
+      .section {
+        padding: 14px var(--side-pad) 28px;
+      }
+      .section h2 {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 800;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="today"></div>
+    <main>
+        <!-- <hr> -->
+        <code id="browserCheckResult"></code>
+        <p>
+            <video id="my-player" class="video-js vjs-default-skin vjs-16-9" controls data-setup="{}">
+            </video>
+        </p>
+    </main>
+
+    <hr>
+
+
+    <script>
+      // 상단 중앙에 오늘 날짜 출력 (브라우저 로컬 시간 기준)
+      (function () {
+        const el = document.getElementById("today");
+        const now = new Date();
+        el.textContent = now.toLocaleDateString("ko-KR", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+          weekday: "long",
+        });
+      })();
+    </script>
+
+    <!-- <video id="video"
+           width="640"
+           poster="//shaka-player-demo.appspot.com/assets/poster.jpg"
+           controls autoplay></video> -->
+  </body>
+
+  <script src="myapp.js"></script>
+  
+</html>
