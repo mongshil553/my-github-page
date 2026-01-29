@@ -15,6 +15,7 @@ async function getConfig() {
     const r = await fetch("https://zf6ixbp7bs7ut23gfkonjml2ae0sjywf.lambda-url.ap-southeast-2.on.aws/",
       {
         method: "POST",
+        mode: 'cors',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data)
       }
