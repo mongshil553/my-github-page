@@ -7,7 +7,7 @@ async function getConfig() {
   const contentId = "test_contendId"; // Live/VOD Station에 설정한 Multi DRM Content ID :contentReference[oaicite:13]{index=13}
   const userId = "test_userId";
   data = {
-    "contendId": contendId,
+    "contentId": contentId,
     "userId": userId,
   };
 
