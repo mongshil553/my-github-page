@@ -103,7 +103,7 @@ function checkBrowser() {
   browser = detectedBrowser;
   const result = `Running in ${browser}. ${drmType} supported.`;
   const browserCheckElement = document.getElementById('browserCheckResult');
-  if (browserCheckElement) browserCheckElement.innerHTML = result;
+  // if (browserCheckElement) browserCheckElement.innerHTML = result;
   console.log(result);
 
   return browser;
