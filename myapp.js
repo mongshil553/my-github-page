@@ -21,6 +21,8 @@ async function getConfig() {
       }
     );
 
+    console.log("DEBUG_TEST");
+
     if (!r.ok) throw new Error(await r.text());
     return await r.json();
     
