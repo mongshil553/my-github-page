@@ -4,7 +4,7 @@ const mpd_src = "https://my-ncloud-bucket.s3.ap-southeast-2.amazonaws.com/blts_s
 
 
 async function getConfig() {
-  const contentId = "ncloud_enc_test"; // Live/VOD Station에 설정한 Multi DRM Content ID :contentReference[oaicite:13]{index=13}
+  const contentId = "enc_test"; // Live/VOD Station에 설정한 Multi DRM Content ID :contentReference[oaicite:13]{index=13}
   const userId = "test_userId";
   data = {
     "contentId": contentId,
